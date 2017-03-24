@@ -29,7 +29,7 @@
 
 (desktop-save-mode 1)
 
-(global-set-key [C-tab] 'other-window)
+(global-set-key (kbd "<C-tab>") 'other-window)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq transient-mark-mode nil)
 
@@ -84,6 +84,10 @@
 (setq org-directory "~/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "s-n s-n") 'org-capture)
+
+(defun magit-mode-hook-functions ()
+  (define-key magit-mode-map (kbd "<C-tab>") 'other-window))
+(add-hook 'magit-mode-hook 'magit-mode-hook-functions)
 
 (defun python-mode-hook-functions ()
   (set-fill-column 80)
