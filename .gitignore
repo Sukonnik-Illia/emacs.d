@@ -1,0 +1,6 @@
+session*
+tramp
+elpa/
+bookmarks
+\.*
+!\.gitignore
