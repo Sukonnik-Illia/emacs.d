@@ -94,3 +94,6 @@
   (fci-mode t)
   )
 (add-hook 'python-mode-hook 'python-mode-hook-functions)
+
+;; use view-mode aggressively
+(setq view-read-only t)
