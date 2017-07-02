@@ -23,7 +23,7 @@
 
 ;; Highlight brackets
 (show-paren-mode t)
-
+(toggle-truncate-lines t)
 ;; Run emacs as server
 (server-start)
 
