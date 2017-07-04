@@ -93,6 +93,7 @@
   (set-fill-column 80)
   (fci-mode t)
   (highlight-indentation-mode t)
+  (toggle-truncate-lines t)
   )
 (add-hook 'python-mode-hook 'python-mode-hook-functions)
 
