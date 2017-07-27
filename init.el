@@ -90,6 +90,7 @@
 (add-hook 'magit-mode-hook 'magit-mode-hook-functions)
 
 (defun python-mode-hook-functions ()
+  (define-key python-mode-map (kbd "C-c c") 'comment-region)
   (set-fill-column 80)
   (fci-mode t)
   (highlight-indentation-mode t)
