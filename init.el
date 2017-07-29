@@ -1,6 +1,10 @@
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (load custom-file)
 
+;; Set default font
+(add-to-list 'default-frame-alist '(font . "Dejavu Sans Mono-11"))
+(set-face-attribute 'default t :font "Dejavu Sans Mono-11")
+
 ;; Disable startup message
 (setq inhibit-startup-message t)
 
