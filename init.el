@@ -88,6 +88,7 @@
 (setq org-directory "~/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "s-n s-n") 'org-capture)
+(setq org-html-doctype "html5")
 
 (defun magit-mode-hook-functions ()
   (define-key magit-mode-map (kbd "<C-tab>") 'other-window))
