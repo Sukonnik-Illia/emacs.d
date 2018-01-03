@@ -104,3 +104,7 @@
 
 ;; use view-mode aggressively
 (setq view-read-only t)
+
+(require 'dired-x)
+(setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
+(add-hook 'dired-mode-hook (lambda () (dired-omit-mode t)))
