@@ -36,7 +36,6 @@
 (global-set-key (kbd "<C-tab>") 'other-window)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq transient-mark-mode nil)
-
 (put 'narrow-to-region 'disabled nil)
 (put 'narrow-to-page   'disabled nil)
 (put 'narrow-to-defun  'disabled nil)
@@ -94,14 +93,15 @@
   (define-key magit-mode-map (kbd "<C-tab>") 'other-window))
 (add-hook 'magit-mode-hook 'magit-mode-hook-functions)
 
-(defun python-mode-hook-functions ()
-  (define-key python-mode-map (kbd "C-c c") 'comment-region)
+(defun elpy-mode-hook-functions ()
+  (define-key elpy-mode-map (kbd "C-c c") 'comment-region)
+  (define-key elpy-mode-map (kbd "M-.") 'dumb-jump-go)
   (set-fill-column 80)
   (fci-mode t)
   (highlight-indentation-mode t)
   (toggle-truncate-lines t)
   )
-(add-hook 'python-mode-hook 'python-mode-hook-functions)
+(add-hook 'elpy-mode-hook 'elpy-mode-hook-functions)
 
 ;; use view-mode aggressively
 (setq view-read-only t)
@@ -109,3 +109,8 @@
 (require 'dired-x)
 (setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode t)))
+
+(global-unset-key (kbd "C-z"))
+(setq jiralib-url "https://madecom.atlassian.net")
+(setq venv-location "/home/illiasukonnik/.pyvenvs/")
+(setq path-to-ctags "/usr/bin/ctags")
