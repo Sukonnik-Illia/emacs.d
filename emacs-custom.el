@@ -13,7 +13,7 @@
     ("8c371df27cdf54e182b1d747e46ed66543a83b74aa6e892056396b0001473b82" default)))
  '(package-selected-packages
    (quote
-    (dumb-jump ecb ag virtualenvwrapper org-jira company-jedi web-mode fill-column-indicator docker json-mode dired-quick-sort crontab-mode yaml-mode dockerfile-mode markdown-mode magit elpy))))
+    (csv-mode pylint dumb-jump ecb ag virtualenvwrapper org-jira company-jedi web-mode fill-column-indicator docker json-mode dired-quick-sort crontab-mode yaml-mode dockerfile-mode markdown-mode magit elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

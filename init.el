@@ -31,6 +31,8 @@
 ;; Run emacs as server
 (server-start)
 
+(setq html-autoview-mode -1)
+
 (desktop-save-mode 1)
 
 (global-set-key (kbd "<C-tab>") 'other-window)
@@ -112,5 +114,6 @@
 
 (global-unset-key (kbd "C-z"))
 (setq jiralib-url "https://madecom.atlassian.net")
-(setq venv-location "/home/illiasukonnik/.pyvenvs/")
+(setq venv-location "/home/isukonnik/.pyvenvs/")
 (setq path-to-ctags "/usr/bin/ctags")
+(setq-default indent-tabs-mode nil)
